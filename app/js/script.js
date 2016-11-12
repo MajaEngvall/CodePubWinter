@@ -7,7 +7,8 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
     console.log('shapes', map.shapes);
     $scope.pos = {
     	lat: 59.3341577,
-    	long: 18.0745626
+    	lng: 18.0745626,
+    	zoom: 16
     }
   });
 });
