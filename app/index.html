@@ -39,9 +39,19 @@
                   <b>My Position</b>
                 </div>
              </custom-marker>
+             <custom-marker ng-repeat="spot in privat" position="{{spot.lat}}, {{spot.lng}}">
+                <div class="custom-marker-privat">
+                  <md-icon>account_circle</md-icon>
+                </div>
+             </custom-marker>
+             <custom-marker ng-repeat="spot in kommun" position="{{spot.lat}}, {{spot.lng}}">
+                <div class="custom-marker-kommun">
+                  <md-icon>info</md-icon>
+                </div>
+             </custom-marker>
           </ng-map>
         </div>
-
+      
 
       <!-- Plus Button -->
       <div id="plus-button" ng-controller="PlusMenuCtrl">

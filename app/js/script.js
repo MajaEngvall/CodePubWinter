@@ -11,6 +11,39 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
     	lng: 18.0745626,
     	zoom: 16
     }
+
+    $scope.kommun = [
+        {
+           "lat": 59.3321577,
+           "lng": 18.0753656
+        },
+        {
+           "lat": 59.3381577,
+           "lng": 18.0715626
+        },
+        {
+           "lat": 59.3341577,
+           "lng": 18.0775626
+        }
+
+    ];
+
+    $scope.privat = [
+        {
+           "lat": 59.3343577,
+           "lng": 18.0743656
+        },
+        {
+           "lat": 59.3361577,
+           "lng": 18.0755626
+        },
+        {
+           "lat": 59.3321577,
+           "lng": 18.0725626
+        }
+
+    ];
+
     $scope.isOpen = false;
     $scope.togglePlusMenu = function(){
     	if($scope.isOpen) {
