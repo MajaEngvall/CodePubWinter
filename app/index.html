@@ -20,7 +20,16 @@
 
         <md-content layout-margin>
           <p>
-            Content
+            Mina anmälningar
+          </p>
+          <p>
+            Översikt
+          </p>
+          <p>
+            Statistik
+          </p>
+          <p>
+            Inställningar
           </p>
           <md-button ng-click="toggleLeft()" class="md-accent">
             Close this Sidenav
@@ -42,6 +51,14 @@
               <input ng-model="search" type="text" placeholder="I'm heading to.." >
               <md-icon style="display:inline-block;">search</md-icon>
             </md-input-container>
+
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More">
+              <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+            </md-button>
           </div>
         </md-toolbar>
 
@@ -51,12 +68,22 @@
           <ng-map center="{{pos.lat}}, {{pos.lng}}" zoom="{{pos.zoom}}">
             <custom-marker position="{{pos.lat}}, {{pos.lng}}">
                 <div class="custom-marker">
-                  <b>My Position</b>
+                  <md-icon style="color:#0091ff;">my_location</md-icon>
+                </div>
+             </custom-marker>
+             <custom-marker ng-repeat="spot in privat" position="{{spot.lat}}, {{spot.lng}}">
+                <div class="custom-marker-privat">
+                  <md-icon>account_circle</md-icon>
+                </div>
+             </custom-marker>
+             <custom-marker ng-repeat="spot in kommun" position="{{spot.lat}}, {{spot.lng}}">
+                <div class="custom-marker-kommun">
+                  <md-icon style="color:#003666;">info</md-icon>
                 </div>
              </custom-marker>
           </ng-map>
         </div>
-
+      
 
       <!-- Plus Button -->
       <div id="plus-button" ng-controller="PlusMenuCtrl">
@@ -69,15 +96,16 @@
           </md-fab-trigger>
 
           <md-fab-actions>
+
             <md-button aria-label="Twitter" class="md-fab md-raised md-mini" ng-click="editMode(true)">
               <md-icon aria-label="Twitter">person_pin_circle</md-icon>
             </md-button>
-<!--             <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
               <md-icon aria-label="Facebook">delete</md-icon>
             </md-button>
             <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
               <md-icon aria-label="Google Hangout">star</md-icon>
-            </md-button> -->
+            </md-button>
           </md-fab-actions>
         </md-fab-speed-dial>
       </div>
