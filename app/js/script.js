@@ -5,5 +5,9 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
     console.log(map.getCenter());
     console.log('markers', map.markers);
     console.log('shapes', map.shapes);
+    $scope.pos = {
+    	lat: 59.3341577,
+    	long: 18.0745626
+    }
   });
 });
