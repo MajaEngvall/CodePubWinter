@@ -51,14 +51,6 @@
               <input ng-model="search" type="text" placeholder="I'm heading to.." >
               <md-icon style="display:inline-block;">search</md-icon>
             </md-input-container>
-
-            <span flex></span>
-            <md-button class="md-icon-button" aria-label="Favorite">
-              <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="More">
-              <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-            </md-button>
           </div>
         </md-toolbar>
 
@@ -91,19 +83,14 @@
                            ng-class="demo.selectedMode">
           <md-fab-trigger>
             <md-button aria-label="menu" class="md-fab md-warn">
-              <md-icon>menu</md-icon>
+              <md-icon>add</md-icon>
             </md-button>
           </md-fab-trigger>
 
           <md-fab-actions>
-            <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-              <md-icon aria-label="Twitter">add</md-icon>
-            </md-button>
-            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-              <md-icon aria-label="Facebook">delete</md-icon>
-            </md-button>
-            <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
-              <md-icon aria-label="Google Hangout">star</md-icon>
+
+            <md-button aria-label="Twitter" class="md-fab md-raised md-mini" ng-click="editMode(true)">
+              <md-icon aria-label="Twitter">person_pin_circle</md-icon>
             </md-button>
           </md-fab-actions>
         </md-fab-speed-dial>

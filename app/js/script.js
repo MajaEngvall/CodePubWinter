@@ -1,5 +1,5 @@
 angular.module('BlankApp', ['ngMaterial', 'ngMap'])
-.controller('AppCtrl', function(NgMap,$scope, $mdSidenav){
+.controller('AppCtrl', function(NgMap,$scope, $mdSidenav, $document){
 	$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq_v_JvxmZ_56MWWcGjL1KUlIb3_Ki5Nc";
 	NgMap.getMap().then(function(map) {
 	    console.log(map.getCenter());
@@ -63,9 +63,12 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
     $scope.search = 'Birger Jarlsgatan 7';
 
     $scope.edit = false;
-    $scope.editMode = function(setting) {
-    	$scope.edit = setting;
+    $scope.editMode = function(editMode) {
+    	$scope.edit = editMode;
     	console.log($scope.edit)
+    	$document.on('click', function(){
+    		console.log('click')
+    	})
     }
 })
 .controller('PlusMenuCtrl', function($scope){
