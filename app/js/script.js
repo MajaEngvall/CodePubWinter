@@ -59,6 +59,8 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
         $mdSidenav(componentId).toggle();
       }
     }
+
+    $scope.search = 'Birger Jarlsgatan 7';
 })
 .controller('PlusMenuCtrl', function($scope){
   this.topDirections = ['left', 'up'];
