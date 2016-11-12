@@ -61,6 +61,12 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
     }
 
     $scope.search = 'Birger Jarlsgatan 7';
+
+    $scope.edit = false;
+    $scope.editMode = function(setting) {
+    	$scope.edit = setting;
+    	console.log($scope.edit)
+    }
 })
 .controller('PlusMenuCtrl', function($scope){
   this.topDirections = ['left', 'up'];
