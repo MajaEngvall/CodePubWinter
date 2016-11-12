@@ -65,7 +65,9 @@
              </custom-marker>
              <custom-marker ng-repeat="spot in privat" position="{{spot.lat}}, {{spot.lng}}">
                 <div class="custom-marker-privat">
-                  <md-icon>account_circle</md-icon>
+                  <md-icon ng-if="spot.prio=='high'" style="color:red;">account_circle</md-icon>
+                  <md-icon ng-if="spot.prio=='medium'" style="color:orange;">account_circle</md-icon>
+                  <md-icon ng-if="spot.prio=='low'" style="color:#ffd800;">account_circle</md-icon>
                 </div>
              </custom-marker>
              <custom-marker ng-repeat="spot in kommun" position="{{spot.lat}}, {{spot.lng}}">

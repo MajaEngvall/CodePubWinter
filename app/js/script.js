@@ -31,15 +31,33 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
     $scope.privat = [
         {
            "lat": 59.3343577,
-           "lng": 18.0743656
+           "lng": 18.0743656,
+           "prio": "high"
         },
         {
            "lat": 59.3361577,
-           "lng": 18.0755626
+           "lng": 18.0755626,
+           "prio": "medium"
         },
         {
            "lat": 59.3321577,
-           "lng": 18.0725626
+           "lng": 18.0725626,
+           "prio": "low"
+        },
+        {
+           "lat": 59.3341577,
+           "lng": 18.0728626,
+           "prio": "high"
+        },
+        {
+           "lat": 59.3391577,
+           "lng": 18.0735626,
+           "prio": "medium"
+        },
+        {
+           "lat": 59.3311577,
+           "lng": 18.0735626,
+           "prio": "low"
         }
 
     ];
