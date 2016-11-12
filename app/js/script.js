@@ -96,7 +96,10 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
 	    		prio: "high"
     		}
 
-    		$scope.privat.push(pos);
+    		$scope.$apply(function(){
+    			$scope.privat.push(pos);
+    		})
+    		
     		console.log($scope.privat)
 		});
 
