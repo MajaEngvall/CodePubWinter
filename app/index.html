@@ -20,7 +20,16 @@
 
         <md-content layout-margin>
           <p>
-            Content
+            Mina anmälningar
+          </p>
+          <p>
+            Översikt
+          </p>
+          <p>
+            Statistik
+          </p>
+          <p>
+            Inställningar
           </p>
           <md-button ng-click="toggleLeft()" class="md-accent">
             Close this Sidenav
@@ -59,7 +68,7 @@
           <ng-map center="{{pos.lat}}, {{pos.lng}}" zoom="{{pos.zoom}}">
             <custom-marker position="{{pos.lat}}, {{pos.lng}}">
                 <div class="custom-marker">
-                  <b>My Position</b>
+                  <md-icon style="color:#0091ff;">my_location</md-icon>
                 </div>
              </custom-marker>
              <custom-marker ng-repeat="spot in privat" position="{{spot.lat}}, {{spot.lng}}">
@@ -69,7 +78,7 @@
              </custom-marker>
              <custom-marker ng-repeat="spot in kommun" position="{{spot.lat}}, {{spot.lng}}">
                 <div class="custom-marker-kommun">
-                  <md-icon>info</md-icon>
+                  <md-icon style="color:#003666;">info</md-icon>
                 </div>
              </custom-marker>
           </ng-map>
