@@ -26,4 +26,21 @@ angular.module('BlankApp', ['ngMaterial', 'ngMap'])
         $mdSidenav(componentId).toggle();
       }
     }
+})
+.controller('PlusMenuCtrl', function($scope){
+  this.topDirections = ['left', 'up'];
+  this.bottomDirections = ['down', 'right'];
+
+  this.isOpen = false;
+
+  this.availableModes = ['md-fling', 'md-scale'];
+  this.selectedMode = 'md-fling';
+
+  this.availableDirections = ['up', 'down', 'left', 'right'];
+  this.selectedDirection = 'up';
+  $scope.demo = {
+    isOpen: false,
+    selectedDirection: 'up',
+    selectedMode: 'md-fling'
+  };
 });

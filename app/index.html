@@ -44,26 +44,28 @@
 
 
       <!-- Plus Button -->
-      <md-fab-speed-dial md-open="isOpen" md-direction="up"
-                         ng-class="md-fling">
-        <md-fab-trigger>
-          <md-button aria-label="menu" class="md-fab md-warn" ng-click="">
-            <md-icon>menu</md-icon>
-          </md-button>
-        </md-fab-trigger>
+      <div id="plus-button" ng-controller="PlusMenuCtrl">
+        <md-fab-speed-dial md-open="demo.isOpen" md-direction="{{demo.selectedDirection}}"
+                           ng-class="demo.selectedMode">
+          <md-fab-trigger>
+            <md-button aria-label="menu" class="md-fab md-warn">
+              <md-icon>menu</md-icon>
+            </md-button>
+          </md-fab-trigger>
 
-        <md-fab-actions>
-          <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-            <md-icon>menu</md-icon>
-          </md-button>
-          <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-            <md-icon>menu</md-icon>
-          </md-button>
-          <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
-            <md-icon>menu</md-icon>
-          </md-button>
-        </md-fab-actions>
-      </md-fab-speed-dial>
+          <md-fab-actions>
+            <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
+              <md-icon aria-label="Twitter">add</md-icon>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+              <md-icon aria-label="Facebook">delete</md-icon>
+            </md-button>
+            <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+              <md-icon aria-label="Google Hangout">star</md-icon>
+            </md-button>
+          </md-fab-actions>
+        </md-fab-speed-dial>
+      </div>
 
       </md-content>
 
